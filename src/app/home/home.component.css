@@ -1,0 +1,11 @@
+header {
+  background-image: url("./../../assets/img/andromeda-galaxy.jpeg");
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.header-text {
+  z-index: 2;
+}

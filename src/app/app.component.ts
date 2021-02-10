@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'voyager';
+  loggedIn = false;
+  firstName = 'amr' || 'Sign in';
+  // title = 'Voyager!';
+
+  toggleLogIn(e) {
+    this.loggedIn = !this.loggedIn;
+  }
+  
 }
