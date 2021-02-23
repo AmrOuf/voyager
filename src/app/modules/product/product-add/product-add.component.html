@@ -1,0 +1,37 @@
+<form [formGroup]="addProductForm" (ngSubmit)="onAddProductSubmit()">
+  <div>
+    <label for="productName">Name</label>
+    <input id="productName" type="text" formControlName="productName" />
+  </div>
+  <div>
+    <label for="productPrice">Price</label>
+    <input id="productPrice" type="number" formControlName="productPrice" />
+  </div>
+  <div>
+    <p>Category:</p>
+    <label>
+      <input
+        type="radio"
+        id="reflector"
+        formControlName="category"
+        value="reflector"
+      />
+      Reflector
+    </label>
+    <label>
+      <input
+        type="radio"
+        id="refractor"
+        formControlName="category"
+        value="refractor"
+      />
+      Refractor
+    </label>
+  </div>
+  <button
+    class="bg-purple-600 hover:bg-purple-700 focus:outline-none text-white px-8 py-3 mt-2 w-40 rounded"
+    type="submit"
+  >
+    Submit
+  </button>
+</form>

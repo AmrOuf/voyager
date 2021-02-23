@@ -1,0 +1,9 @@
+<div *ngFor="let product of products">
+  <span>{{ product.name }}</span>
+  <a
+    [routerLink]="product.id"
+    class="bg-purple-600 hover:bg-purple-700 focus:outline-none inline-block cursor-pointer text-white px-8 py-2 mt-2 ml-4 w-40 rounded"
+  >
+    View Product
+  </a>
+</div>

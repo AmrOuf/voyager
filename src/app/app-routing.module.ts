@@ -4,18 +4,25 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   {
     path: 'auth',
-    loadChildren: () => import('./auth/auth.module').then((m) => m.AuthModule),
+    loadChildren: () =>
+      import('./modules/auth/auth.module').then((m) => m.AuthModule),
   },
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then((m) => m.HomeModule),
+    loadChildren: () =>
+      import('./modules/home/home.module').then((m) => m.HomeModule),
   },
   {
     path: 'product',
     loadChildren: () =>
-      import('./product/product.module').then((m) => m.ProductModule),
+      import('./modules/product/product.module').then((m) => m.ProductModule),
   },
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  {
+    path: '',
+    loadChildren: () =>
+      import('./modules/home/home.module').then((m) => m.HomeModule),
+    pathMatch: 'full',
+  },
 ];
 
 @NgModule({
